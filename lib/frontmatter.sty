@@ -48,15 +48,20 @@
 
 %# Titlepage ---------------------------------------------------------------------
 
+\title{\assignmentSubject}
+\subtitle{\assignmentTitle}
+\author{\assignmentAuthors}
+\date{\today}
+
 \makeatletter
 \def\@maketitle{
   \begin{center}
 		\facultyHeader
 		{\rmfamily\Huge\assignmentSubject}\\[1em]
 		{\rmfamily\Large\mdseries\assignmentTitle}\\[1em]
-		{\sffamily\Large\assignmentAuthors}\\[1.5em]
-		{\rmfamily\Small\mdseries\today}\\[5em]
-	\end{center}
+		{\sffamily\large\assignmentAuthors}\\[1.5em]
+		{\rmfamily\large\mdseries\today}
+	\end{center}\vspace*{5em}
 }
 \makeatother
 

@@ -22,6 +22,7 @@
 \RequirePackage{lmodern}
 \RequirePackage[english]{babel}
 \RequirePackage{graphicx}
+\RequirePackage{amsmath}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{hyperref}
@@ -29,7 +30,6 @@
 \RequirePackage{color, xcolor}
 \RequirePackage{scrlayer-scrpage}
 \RequirePackage{lastpage}
-\RequirePackage{adjustbox}
 \RequirePackage{frontmatter}
 \RequirePackage{tumheaders}
 
