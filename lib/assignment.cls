@@ -27,7 +27,11 @@
 \RequirePackage{hyperref}
 \RequirePackage{listings}
 \RequirePackage{color, xcolor}
+\RequirePackage{scrlayer-scrpage}
+\RequirePackage{lastpage}
+\RequirePackage{adjustbox}
 \RequirePackage{frontmatter}
+\RequirePackage{tumheaders}
 
 
 % Set default PDF metadata

@@ -3,7 +3,7 @@
 \ProvidesPackage{frontmatter}[2023/11/7 v0.1]
 
 %# Layout --------------------------------------------------------------
-\RequirePackage[top=1cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
+\RequirePackage[top=2.5cm, bottom=3.5cm, left=2cm, right=2cm]{geometry}
 
 %# Colors ------------------------------------------------------------------------
 \definecolor{mGreen}{rgb}{0,0.6,0}
@@ -47,17 +47,22 @@
 }
 
 %# Titlepage ---------------------------------------------------------------------
-%\providecommand{\assignmentSubject}{Assignment Subject}
-%\providecommand{\assignmentName}{Assignment Name}
-%\providecommand{\assignmentAuthors}{Author 1 \& Author 2}
 
-\setkomafont{title}{\rmfamily\LARGE\bfseries}
-\setkomafont{subtitle}{\sffamily\Large\mdseries}
-\setkomafont{author}{\sffamily\large\bfseries}
-\newkomafont{affiliation}{\sffamily\small\mdseries}
-\setkomafont{date}{\sffamily\small\mdseries}
+\makeatletter
+\def\@maketitle{
+  \begin{center}
+		\facultyHeader
+		{\rmfamily\Huge\assignmentSubject}\\[1em]
+		{\rmfamily\Large\mdseries\assignmentTitle}\\[1em]
+		{\sffamily\Large\assignmentAuthors}\\[1.5em]
+		{\rmfamily\Small\mdseries\today}\\[5em]
+	\end{center}
+}
+\makeatother
 
-\title{\assignmentSubject}
-\subtitle{\assignmentTitle}
-\author{\assignmentAuthors}
-\date{\today}
+%# Page Layout ---------------------------------------------------------------------
+
+\cfoot*{\thepage ~of~ \pageref*{LastPage}}
+\chead{\small\mdseries{\assignmentTitle}}
+\ihead{\small\mdseries{\assignmentAuthors}}
+\ohead{\small\mdseries{\today}}

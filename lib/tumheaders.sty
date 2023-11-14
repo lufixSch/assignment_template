@@ -1,0 +1,20 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tumheaders}[2023/11/7 v0.1]
+
+% Generic tum header. Logo location, fakulty and Prof can be customized
+\newcommand{\eiFacultyHeader}[3]{
+  \begin{tabular}{r}
+    \includegraphics[height=2.3cm]{#1}
+  \end{tabular}
+  \begin{tabular}{l}
+    \Large\bfseries\uppercase{Technische Universität München}\\
+    \large{Fakultät für Elektrotechnik und Informatik}\\
+    \large{#2}\\
+    \large{#3}
+  \end{tabular}\\[3em]
+}
+
+\newcommand{\ldvFacultyHeader}{
+  \eiFacultyHeader{assets/ldv_logo.pdf}{Lehrstuhl für Datenverarbeitung}{Prof. Dr.-Ing. K. Diepold}
+}

@@ -2,7 +2,7 @@
 
 OUTDIR ?= build
 FILE ?= main.tex
-LATEXMK = -pdf -file-line-error -f -interaction=nonstopmode -output-directory=$(OUTDIR)
+LATEXMK = -xelatex -file-line-error -f -interaction=nonstopmode -output-directory=$(OUTDIR)
 
 .PHONY: help Makefile
 help:
